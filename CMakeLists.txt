@@ -128,7 +128,7 @@ endif()
 
 if (BUILD_STATIC_LIBS)
 	macro(check_submodule_git dir)
-		if (NOT EXISTS "${CMAKE_SOURCE_DIR}/${dir}/.git")
+		if (NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/${dir}/.git")
 			message(SEND_ERROR
 			"It seems you've forgot to clone the dependencies; ${dir} is not a git repository."
 			"Please run `git submodule update --init` first.")
