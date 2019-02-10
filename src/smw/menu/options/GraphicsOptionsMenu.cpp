@@ -61,7 +61,6 @@ UI_GraphicsOptionsMenu::UI_GraphicsOptionsMenu() : UI_Menu()
     miFullscreenField->Add("1:1", gfxScreenSize_PixelPerfect, "", false, false);
     miFullscreenField->SetData((short int*)&game_values.screensize, NULL, NULL);
     miFullscreenField->SetKey(game_values.screensize);
-    miFullscreenField->SetAutoAdvance(true);
 #else
     miFullscreenField = new MI_SelectField(&rm->spr_selectfield, 70, 200, "Screen Size", 500, 220);
     miFullscreenField->Add("Windowed", 0, "", false, false);
@@ -78,7 +77,6 @@ UI_GraphicsOptionsMenu::UI_GraphicsOptionsMenu() : UI_Menu()
     miFilteringField->Add("Best", gfxScreenFilter_Best, "", false, false);
     miFilteringField->SetData((short int*)&game_values.screenfilter, NULL, NULL);
     miFilteringField->SetKey(game_values.screenfilter);
-    miFilteringField->SetAutoAdvance(true);
 
     miMenuGraphicsPackField = new MI_PacksField(&rm->spr_selectfield, 70, 280, "Menu Graphics", 500, 220, menugraphicspacklist, MENU_CODE_MENU_GRAPHICS_PACK_CHANGED);
     miWorldGraphicsPackField = new MI_PacksField(&rm->spr_selectfield, 70, 320, "World Graphics", 500, 220, worldgraphicspacklist, MENU_CODE_WORLD_GRAPHICS_PACK_CHANGED);

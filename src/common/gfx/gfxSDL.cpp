@@ -244,8 +244,8 @@ void GraphicsSDL::FlipScreen()
         float factor = factor_w > factor_h ? factor_h : factor_w;
 
         if (game_values.screensize == gfxScreenSize_PixelPerfect) {
-            dest_w = GFX_WIN_W;
-            dest_h = GFX_WIN_H;
+            dest_w = GFX_SCREEN_W;
+            dest_h = GFX_SCREEN_H;
         } else if(game_values.screensize == gfxScreenSize_Stretch) {
             dest_w = GFX_WIN_W;
             dest_h = GFX_WIN_H;
